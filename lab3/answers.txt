@@ -1,0 +1,17 @@
+sort1 uses: Bubble Sort
+
+How do you know?: By sorting the sorted files we are analysing the lower bound of steps required, big omega, and sort1 has the lowest sort time, it means big omega(n),
+                  Bubble sort. Besides that sort1 has the biggest sort time, and having account the video in class where they compared the three types, the Bubble sort
+                  was the slowest.
+
+sort2 uses: Merge Sort
+
+How do you know?: By sorting the reversed files, that means we will analyse the upper bound of steps required to sort, 'O' and of the three, sort2
+                  has the lowest time if it has the lowest time it means O(n log n), merge sort, if we sort the random files, sort2 will also be the fastest.
+
+sort3 uses: Selection Sort
+
+How do you know?: By elimination this has to be the Selection Sort, but this one has the biggest sorting time when analysing the sorted files that means big omega(n^2),
+                  Selection sort. However for the random files it's sorting time is lower than sort1 but higher than sort2 by comparing with the class video, it has to be
+                  Selection sort
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+            
+            
+            function PrintAnswer(event)
+            {
+                let trigger = event.srcElement
+                
+                if (trigger.innerHTML == 'Blue')
+                {
+                    
+                    trigger.style.backgroundColor = 'green';
+                    document.querySelector('#answer1').innerHTML = 'Correct';
+                    
+                }
+                else
+                {
+                    trigger.style.backgroundColor = 'red';
+                    document.querySelector('#answer1').innerHTML = 'Incorrect';
+                }
+            };
+            function check(){
+                let input1 = document.querySelector('input');
+                if (input1.value === 'England'){
+                    input1.style.backgroundColor = 'green';
+                    document.querySelector('#answer2').innerHTML = 'Correct';
+                }
+                else{
+                    input1.style.backgroundColor = 'red';
+                    document.querySelector('#answer2').innerHTML = 'Incorrect';
+                }
+                
+                
+            };
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                    <h3> What color is the sky?</h3>
+                    <button onclick = "PrintAnswer(event);">Blue</button>
+                    <button onclick = "PrintAnswer(event);">Green</button>
+                    <button onclick = "PrintAnswer(event);">Red</button>
+                    <button onclick = "PrintAnswer(event);">White</button>
+                    <p id = "answer1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <h3>Which country lost the 2020 Euro League?</h3>
+                <input type= "text"></input>
+                <button onclick = "check();" >Check</button>
+                
+                <p id = "answer2"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
