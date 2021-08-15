@@ -1,0 +1,6 @@
+Flask
+Color
+requests
+bs4
+math
+re

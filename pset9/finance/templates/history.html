@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    
+        <div class = "table">
+                <table class = "info">
+                    <thead>
+                        <b><tr>
+                            <th>Activity</th>
+                            <th>Symbol</th>
+                            <th>Shares</th>
+                            <th>Price</th>
+                            <th>Date</th>
+                        </tr></b>
+                    </thead>
+                    <tbody>
+                        {% for exchange in exchanges %}
+                            {% if exchange.shares > 0 %}
+                        <tr>
+                            
+                            <td>Bought</td>
+                            <td>{{ exchange.Company_symbol }}</td>
+                            <td>+ {{ exchange.shares }}</td>
+                            <td>$ {{ "%.2f"|format(exchange.exchange[2:]|float / exchange.shares) }}</td>
+                            <td> {{ exchange.date }}</td>
+                            
+                        </tr>
+                            {% else %}
+                        <tr>
+                            
+                            <td>Sold</td>
+                            <td>{{ exchange.Company_symbol }}</td>
+                            <td>- {{ exchange.shares * -1 }}</td>
+                            <td>$ {{ "%.2f"|format((exchange.exchange[2:]| float) * - 1/exchange.shares)  }}</td>
+                            <td> {{ exchange.date }}</td>
+                            
+                        </tr>
+                            {% endif %}
+                        {% endfor %}
+                        
+                    </tbody>
+                </table>
+            </div>
+    
+    
+{% endblock %}

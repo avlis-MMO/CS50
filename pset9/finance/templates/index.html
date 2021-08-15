@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    
+        <div class = "table">
+                <table class = "info">
+                    <thead>
+                        <b><tr>
+                            <th>Symbol</th>
+                            <th>Name</th>
+                            <th>Shares</th>
+                            <th>Price</th>
+                            <th>TOTAL</th>
+                        </tr></b>
+                    </thead>
+                    <tbody>
+                        {% for symbol, share, price, name in info %}
+                            {% if share != 0 %}
+                        <tr>
+                            
+                            <td>{{ symbol.Company_symbol }}</td>
+                            <td>{{ name }}</td>
+                            <td>{{ share }}</td>
+                            <td>$ {{ price }}</td>
+                            <td>$ {{ "%.2f"|format(share * price) }}</td>
+                            
+                        </tr>
+                            {% endif %}
+                        {% endfor %}
+                        
+                        <tr>
+                            
+                            <td>CASH</td><td></td><td></td><td></td>
+                            <td>$ {{ "%.2f"|format(cash) }}</td>
+                        </tr>
+                        
+                        <tr><td></td><td></td><td></td><td></td><td><b>$ {{ "%.2f"|format(Sum + cash)}}</b></td></tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+    
+    
+{% endblock %}

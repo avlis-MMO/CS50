@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    
+        <div class = "quoted">
+            <ul>
+                <li><p>Company Name: {{ dic["name"]}}</p></li>
+                <li><p>Price: {{ usd(dic["price"])}} $</p></li>
+                <li><p>Symbol: {{ dic["symbol"]}}</p></li>
+            </ul>
+        </div>
+    
+{% endblock %}

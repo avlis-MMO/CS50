@@ -1,0 +1,116 @@
+body{
+
+    background-color: #bebfc2;
+}
+.worldmap{
+
+    width: 100%;
+    margin: auto;
+    
+}
+path{
+
+    stroke: black;
+    stroke-width: 0.2;
+    pointer-events:all;
+}
+path:hover{
+    stroke: rgb(255, 255, 255); 
+    stroke-width: 0.2%;
+    opacity: 0.6;
+     
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+
+nav ul li{
+    list-style:none;
+    display:inline-block;
+    padding: 8px 12px;
+    position:relative;
+}
+
+nav ul li a{
+    
+    color: #252425;
+    text-decoration:none;
+    font-size: 1.3vw;
+    opacity: 0.7;
+    transition: 0.2s;
+    
+}
+nav ul li a:hover{
+    
+    color: #252425;
+    text-decoration:none;
+    font-size: 1.3vw;
+    font-weight: bold;
+    opacity: 1;
+}
+h1{
+    text-align: center;
+    opacity:0.7;
+    font-size:2 em;
+}
+
+select{
+    background-color: transparent;
+    border: transparent;
+    color: #252425;
+    font-size: 1.3vw;
+    opacity: 0.7;
+
+}
+
+select:hover{
+    opacity: 1;
+    font-weight: bold;
+}
+
+option{
+    background-color:#bebfc2;
+    opacity: 0.1;
+
+}
+.my-legend{
+    border:solid black 0.1em;
+    position:absolute;
+    padding:0.2%;
+    
+    z-index:9;
+    top:80%
+}
+.my-legend .legend-title {
+    text-align: center;
+    margin:auto;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .my-legend .legend-scale ul {
+    display: flex;
+    flex-direction:column;
+    padding-left: 0;
+    float: left;
+    list-style: none;
+    }
+  .my-legend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    display:block;
+    line-height: 1em;
+    font-weight:bold;
+    }
+  .my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 16px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    border: 1px solid #999;
+    }
