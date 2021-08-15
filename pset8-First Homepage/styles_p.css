@@ -1,0 +1,108 @@
+.fpage{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(255,255,255,0.3),rgba(0,0,0,0.9)), url(aero.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+nav img{
+    position: relative;
+    left: 0px;
+    height: auto;
+    width: 10%;
+    
+}
+
+.hello{
+    font-size: 30px;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    padding: 2% 2%;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.nav-link{
+    
+    padding: 1.5%;
+    flex: 1;
+    text-align: right;
+}
+
+.nav-link ul li{
+    list-style:none;
+    display:inline-block;
+    padding: 8px 12px;
+    position:relative;
+}
+
+.nav-link ul li a{
+    
+    color: #252425;
+    text-decoration:none;
+    font-size: 1.3vw;
+    opacity: 0.7;
+    transition: 0.5s;
+    
+}
+.nav-link ul li a::after{
+    content:'';
+    width:0%;
+    height: 2px;
+    background:black;
+    display:block;
+    margin:auto;
+    transition: 0.5s;
+}
+.nav-link ul li a:hover{
+    
+    
+    font-size: 1.7vw;
+    color: black;
+    opacity: 1;
+    font-weight:bold;
+}
+
+.nav-link ul li a:hover::after{
+    
+    width:100%;
+}
+.logo{
+    
+    display:inline-block;
+    width:100%;
+}
+.log{
+    float:right;
+    height:5em;
+}
+
+.container
+{
+    background-color: #ccc;
+    border-radius: 1rem;
+    font-size: 15px;
+    height:400px;
+    position:relative;
+    
+}
+h1{
+    font-size:3.3vw;
+    line-height:5vw;
+}
+
+p{
+    font-size:1.15vw;
+}
+
+.head::after{
+    
+    content:'';
+    width:29%;
+    height: 0.3vw;
+    background:black;
+    display:block;
+}
