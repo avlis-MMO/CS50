@@ -1,2 +1,2 @@
-# CS50
-All the labs and pset of the CS50 course
+# CS50x
+All the labs and pset of the CS50x course
