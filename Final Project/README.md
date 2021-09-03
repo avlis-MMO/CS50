@@ -1,5 +1,5 @@
 # Wolrd map data visualization
-### Video Demo:  <https://youtu.be/VbAXX14D9uM>
+
 ### Description: 
 The project I made is a basic web application, using flask, that extracs information from a webpage, in this case from [knoema](https://knoema.com/ATLAS),
 using web scrapping. This web application will show the user the CO2 emissions and population per country since 1970 in a colored map depending
